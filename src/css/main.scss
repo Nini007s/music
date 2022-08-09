@@ -1,0 +1,62 @@
+@import "_variable";
+@import "_normalize";
+@import "_reset";
+@import "_global";
+
+
+@import "_nav";
+
+
+
+header{
+    width: 100%;
+    height: 100vh;// vh螢幕高度
+    background-color: red;
+    background-image:url(../img/bg/bg-32.png);
+    background-repeat: no-repeat;
+    background-position: 50%; // 50% center致中
+    background-size: cover;// cover自動延展填滿
+    position: relative;
+    z-index: 1;
+    &::before{
+    content:"";
+    background-color: rgba(0, 0, 0, 0.3);
+    width:100%;
+    height:100%;
+    display:block;
+    position: absolute;
+    z-index: -1;
+    opacity: 0.55;
+    }
+    &::after{
+    content:"";
+    background-color: rgba(0, 0, 0, 0.3);
+    width: 100%;
+    height:100%;
+    display:block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -2;
+    // 往下2層
+    }
+}
+
+// 選擇器 選中的東西:
+::selection{
+    background-color: red;
+    color: white;
+}// 選中的字會變白色 背景變紅色
+
+.apple {
+    background-color: red;
+
+    img{
+        display: flex;
+        align-items: center;
+    width: 40%;
+    height: 40%;
+    }
+}
+
+
